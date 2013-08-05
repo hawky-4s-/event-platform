@@ -1,8 +1,10 @@
 package com.livingoz.event.platform.core.cfg;
 
 
-public class EventPlatformConfigurationImpl {
+import com.livingoz.event.platform.api.EventPlatformConfiguration;
+
+public class EventPlatformConfigurationImpl implements EventPlatformConfiguration {
 
   // uuid generator com.faster.xml....
-  
+
 }

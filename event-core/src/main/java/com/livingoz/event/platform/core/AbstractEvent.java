@@ -12,15 +12,15 @@ public abstract class AbstractEvent<T, K, E> implements Event<T, K, E> {
   private Map<String, Object> metaData;
   private T payload;
   private Long occurenceTimestamp;
-  
+
   public K getId() {
     return id;
   }
-  
+
   protected void setId(K id) {
     this.id = id;
   }
-  
+
   public E getEventType() {
     return eventType;
   }
@@ -36,7 +36,7 @@ public abstract class AbstractEvent<T, K, E> implements Event<T, K, E> {
   public void setMetaData(Map<String, Object> metaData) {
     this.metaData = metaData;
   }
-  
+
   public void addMetaData(String key, Object value) {
     if (metaData == null) {
       metaData = new HashMap<String, Object>();
@@ -51,13 +51,13 @@ public abstract class AbstractEvent<T, K, E> implements Event<T, K, E> {
   public void setPayload(T payload) {
     this.payload = payload;
   }
-  
+
   public Long getOccurenceTimestamp() {
     return occurenceTimestamp;
   }
-  
+
   public void setOccurenceTimestamp(Long occurenceTimestamp) {
     this.occurenceTimestamp = occurenceTimestamp;
   }
-  
+
 }

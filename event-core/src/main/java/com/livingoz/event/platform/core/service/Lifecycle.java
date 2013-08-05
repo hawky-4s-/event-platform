@@ -11,17 +11,17 @@ public interface Lifecycle {
     ACTIVATED,
     DESTROYED
   }
-  
+
   public void create();
-  
+
   public void start();
-  
+
   public void stop();
-  
+
   public void suspend();
-  
+
   public void activate();
-  
+
   public void destroy();
-  
+
 }

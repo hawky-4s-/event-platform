@@ -6,5 +6,5 @@ import com.livingoz.event.platform.api.Component;
  * User: chris
  * Date: 7/5/13
  */
-public class DefaultComponent implements Component {
+public abstract class DefaultComponent implements Component {
 }

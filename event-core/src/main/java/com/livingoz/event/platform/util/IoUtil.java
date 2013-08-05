@@ -18,10 +18,10 @@ public class IoUtil {
     } catch (IOException e) {
       // ignore
     }
-    
+
     return null;
   }
-  
+
   public static Properties readPropertiesFromClasspath(String resourceName) {
     try (InputStream in = IoUtil.class.getClassLoader().getResourceAsStream(resourceName)) {
       Properties properties = new Properties();
@@ -34,5 +34,5 @@ public class IoUtil {
       throw new RuntimeException("Unable to load '" + resourceName + "' from classpath.");
     }
   }
-  
+
 }
