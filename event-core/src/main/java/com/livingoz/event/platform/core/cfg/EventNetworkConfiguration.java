@@ -1,11 +1,13 @@
 package com.livingoz.event.platform.core.cfg;
 
-/**
- * Created with IntelliJ IDEA.
- * User: hawky4s
- * Date: 11/09/13
- * Time: 4:26 PM
- * To change this template use File | Settings | File Templates.
- */
+import com.livingoz.event.platform.api.EventNode;
+
+import java.util.List;
+
 public class EventNetworkConfiguration {
+
+  private List<EventNode> nodes;
+  private List<EventProducer>
+  publi
+
 }

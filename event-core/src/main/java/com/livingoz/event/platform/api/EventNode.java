@@ -1,11 +1,22 @@
 package com.livingoz.event.platform.api;
 
+import java.util.List;
+
 /**
- * Created with IntelliJ IDEA.
- * User: hawky4s
- * Date: 11/09/13
- * Time: 4:22 PM
- * To change this template use File | Settings | File Templates.
+ * EventNode are the superclass which represents nodes producing or consuming events.
  */
 public interface EventNode {
+
+  public String getName();
+
+  public void setName(String nodeName);
+
+  public List<Event> consumesEvents();
+
+  public void process(Event event);
+
+  public void start();
+
+  public void stop();
+
 }

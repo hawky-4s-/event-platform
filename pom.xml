@@ -6,7 +6,7 @@
 
   <groupId>com.livingoz.event.platform</groupId>
   <artifactId>platform-root</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
@@ -20,7 +20,8 @@
 
     <version.google.guava>14.0.1</version.google.guava>
     <version.google.reflections>0.9.9-RC1</version.google.reflections>
-    <version.akka>2.2.0</version.akka>
+    <version.akka>2.2.1</version.akka>
+    <version.jackson>2.2.3</version.jackson>
 
     <!-- test deps -->
     <version.junit>4.11</version.junit>
@@ -62,22 +63,22 @@
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.2.2</version>
+        <version>${version.jackson}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
-        <version>2.2.2</version>
+        <version>${version.jackson}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>2.2.2</version>
+        <version>${version.jackson}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-jaxb-annotations</artifactId>
-        <version>2.2.2</version>
+        <version>${version.jackson}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
