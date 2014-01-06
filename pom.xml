@@ -12,16 +12,19 @@
 
   <modules>
     <module>event-core</module>
+    <module>javaee</module>
   </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <version.java>1.7</version.java>
 
-    <version.google.guava>14.0.1</version.google.guava>
+    <version.google.guava>15.0</version.google.guava>
     <version.google.reflections>0.9.9-RC1</version.google.reflections>
     <version.akka>2.2.1</version.akka>
     <version.jackson>2.2.3</version.jackson>
+
+    <version.jboss.javaee.bom>3.0.2.Final</version.jboss.javaee.bom>
 
     <!-- test deps -->
     <version.junit>4.11</version.junit>
