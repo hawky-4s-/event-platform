@@ -1,4 +1,4 @@
-package com.livingoz.event.platform.core.reactor;
+package com.livingoz.event.platform.core.dispatcher;
 
 import com.livingoz.event.platform.api.Dispatcher;
 import com.livingoz.event.platform.api.Event;
