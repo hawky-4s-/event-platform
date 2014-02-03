@@ -2,6 +2,7 @@ package com.livingoz.event.platform.core.executor;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.livingoz.event.platform.api.AsynchronousExecutor;
+import com.livingoz.event.platform.core.EventHandler;
 
 import java.util.Collection;
 import java.util.List;
@@ -10,8 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DefaultExecutorService implements AsynchronousExecutor {
-
-  private static final int NUM_THREADS = 5;
   
   final Logger logger = Logger.getLogger(DefaultExecutorService.class.getName());
   
@@ -32,7 +31,12 @@ public class DefaultExecutorService implements AsynchronousExecutor {
     }
     return executorService.submit(callable);
   }
-  
+
+  @Override
+  public <V> Future<V> handleEvent(EventHandler<V> handler) {
+    return null;
+  }
+
   public boolean isRunning() {
     if (executorService == null || executorService.isShutdown() || executorService.isTerminated()) {
       return false;
@@ -42,11 +46,9 @@ public class DefaultExecutorService implements AsynchronousExecutor {
 
   protected void initialize() {
     logger.info("AsynchronousExecutor[" + getClass().getName() + "] starting...");
-    executorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(
-            NUM_THREADS, 
-            new ThreadFactoryBuilder().setNameFormat("AsynchronousExecutor-Pool-%d")
-                                      .setUncaughtExceptionHandler(new UncaughtExceptionHandler(this))
-                                      .build());
+
+    executorService = (ThreadPoolExecutor) ExecutorServiceFactory.createExecutorService();
+
     logger.info("AsynchronousExecutor[" + getClass().getName() + "] started.");
   }
 

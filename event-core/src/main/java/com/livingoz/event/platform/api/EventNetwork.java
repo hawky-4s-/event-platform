@@ -14,7 +14,7 @@ public interface EventNetwork {
 
   public void start();
 
-  public void pause();
+  public void suspend();
 
   public void shutdown();
 

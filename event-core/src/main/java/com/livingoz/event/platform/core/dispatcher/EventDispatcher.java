@@ -8,14 +8,13 @@ import com.livingoz.event.platform.api.Event;
  * Date: 6/20/13
  */
 public class EventDispatcher implements Dispatcher {
-  private static EventDispatcher ourInstance = new EventDispatcher();
+  private static EventDispatcher INSTANCE = new EventDispatcher();
 
   public static EventDispatcher getInstance() {
-    return ourInstance;
+    return INSTANCE;
   }
 
-  private EventDispatcher() {
-  }
+  private EventDispatcher() {}
 
   @Override
   public void dispatch(Event event) {

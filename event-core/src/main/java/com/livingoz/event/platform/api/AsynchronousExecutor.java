@@ -1,5 +1,7 @@
 package com.livingoz.event.platform.api;
 
+import com.livingoz.event.platform.core.EventHandler;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -24,6 +26,8 @@ public interface AsynchronousExecutor extends ExecutorService {
   public void executeAsynchronously(final Runnable runnable);
   
   public <V> Future<V> executeAsynchronously(final Callable<V> runnable);
+
+  public <V> Future<V> handleEvent(final EventHandler<V> handler);
   
   public void start();
   

@@ -252,7 +252,6 @@ public class EjbExecutorServiceBean extends AbstractExecutorService implements A
     return Collections.emptyList();
   }
 
-  @Override
   @PostConstruct
   public void start() {
   }

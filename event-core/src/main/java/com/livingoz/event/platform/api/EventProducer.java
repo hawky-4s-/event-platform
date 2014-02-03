@@ -8,4 +8,8 @@ public interface EventProducer<T extends Event> extends EventNode {
 
   public void produce();
 
+  public void registerPreProcessor(PreProcessor preProcessor);
+
+  public void registerPostProcessor(PostProcessor postProcessor);
+
 }

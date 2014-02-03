@@ -1,8 +1,10 @@
 package com.livingoz.event.platform.api;
 
 
-public interface EventProcessor<T extends Event> {
+public interface EventProcessor extends Processor {
 
-  public void process(T event);
+  public void registerPreProcessor(PreProcessor preProcessor);
+
+  public void registerPostProcessor(PostProcessor postProcessor);
 
 }

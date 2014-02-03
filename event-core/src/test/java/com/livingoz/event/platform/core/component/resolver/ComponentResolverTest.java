@@ -14,7 +14,7 @@ public class ComponentResolverTest {
   public void resolveComponentFromClasspath() {
     ComponentResolver componentResolver = new ComponentResolver();
 
-    Set<Class<? extends Component>> components = componentResolver.findAllClasses();
+    Set<Class<? extends Component>> components = componentResolver.findAllClassesByType();
     assertTrue(components.contains(DummyComponent.class));
   }
 }

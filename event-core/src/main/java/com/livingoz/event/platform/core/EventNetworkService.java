@@ -15,7 +15,7 @@ public class EventNetworkService {
   private static HashMap<String,EventNetwork> eventNetworks = new HashMap<>();
 
   public static EventNetwork buildEventNetwork(EventNetworkConfiguration configuration) {
-    return null;
+    return configuration.buildEventNetwork();
   }
 
   public static EventNetworkBuilder builder() {

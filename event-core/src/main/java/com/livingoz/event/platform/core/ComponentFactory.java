@@ -1,7 +1,9 @@
 package com.livingoz.event.platform.core;
 
-public class ComponentFactory {
+import com.livingoz.event.platform.api.Component;
 
+public interface ComponentFactory<T extends Component> {
 
+  public T getComponent();
 
 }

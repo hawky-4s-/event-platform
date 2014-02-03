@@ -4,25 +4,26 @@ import java.util.Map;
 
 /**
  * An unique event which occurs at a specific timestamp and transports a payload.
- * It can contain metadata which describes its further semantics.
- *
- * @param <T> payload of event
- * @param <K> id of event
- * @param <E> type of event
+ * It can contain metadata which describes its further semantics. 
+ * 
  * @author chris
+ *
+ * @param <P> payload of event
+ * @param <K> id of event
+ * @param <T> type of event
  */
-public interface Event<T, K, E> {
+public interface Event<P, K, T> {
 
   public K getId();
-
-  public E getEventType();
-
+  
+  public T getEventType();
+  
   public String getName();
-
+  
   public Map<String, Object> getMetadata();
-
-  public T getPayload();
-
+  
+  public P getPayload();
+  
   public Long getOccurenceTimestamp();
-
+  
 }

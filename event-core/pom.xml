@@ -21,10 +21,6 @@
       <groupId>org.reflections</groupId>
       <artifactId>reflections</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-actor_2.10</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -32,12 +28,6 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- for inspiration -->
-    <dependency>
-      <groupId>org.apache.camel</groupId>
-      <artifactId>camel-core</artifactId>
-      <version>2.11.1</version>
-    </dependency>
 
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>

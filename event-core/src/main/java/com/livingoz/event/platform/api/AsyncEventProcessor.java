@@ -5,6 +5,6 @@ package com.livingoz.event.platform.api;
  */
 public interface AsyncEventProcessor<T extends Event> extends EventProcessor {
 
-  public void processAsynchronous(T event);
+  public T processAsynchronous(T event);
 
 }
