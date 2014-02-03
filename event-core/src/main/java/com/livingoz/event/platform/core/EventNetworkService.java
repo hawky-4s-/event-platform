@@ -25,7 +25,7 @@ public class EventNetworkService {
   public EventNetwork getEventNetworkById(String id) {
     EventNetwork eventNetwork = eventNetworks.get(id);
     if (eventNetwork == null) {
-      throw new RuntimeException("Unable to find event network with id '" + id + "'");
+      throw new EventNetworkException("Unable to find event network with id '" + id + "'");
     }
 
     return eventNetwork;

@@ -14,9 +14,7 @@ import java.util.Set;
 public class ClassResolver {
 
   public static Set<Class<?>> findClassesByAnnotation(Class<? extends Annotation> annotation) {
-    Reflections reflections = new Reflections(
-        new ConfigurationBuilder().addUrls(ClasspathHelper.forClassLoader())
-    );
+    Reflections reflections = getReflections();
 
     Set<Class<?>> annotatedClasses = reflections.getTypesAnnotatedWith(annotation);
 
@@ -24,13 +22,17 @@ public class ClassResolver {
   }
 
   public static <T> Set<Class<? extends T>> findClassesByType(Class<T> type) {
-    Reflections reflections = new Reflections(
-        new ConfigurationBuilder().addUrls(ClasspathHelper.forClassLoader())
-    );
+    Reflections reflections = getReflections();
 
     Set<Class<? extends T>> subClasses = reflections.getSubTypesOf(type);
 
     return subClasses;
+  }
+
+  protected static Reflections getReflections() {
+    return new Reflections(
+        new ConfigurationBuilder().addUrls(ClasspathHelper.forClassLoader())
+    );
   }
 
 }

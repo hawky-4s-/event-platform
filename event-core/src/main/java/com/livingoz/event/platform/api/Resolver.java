@@ -4,7 +4,7 @@ import java.util.Set;
 
 public interface Resolver<T> {
 
-  public T findClass(String name);
+  public Class<? extends T> findClass(String name);
 
   public Set<Class<? extends T>> findAllClassesByType();
 
