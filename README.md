@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/hawky-4s-/event-platform.png?label=ready&title=Ready)](https://waffle.io/hawky-4s-/event-platform)
 event-platform
 ==============
 
